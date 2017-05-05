@@ -1,4 +1,14 @@
 ;;; is-a.el --- Tools for testing the environment we're running in
+;; Copyright 2017 by Dave Pearson <davep@davep.org>
+
+;; Author: Dave Pearson <davep@davep.org>
+;; Version: 1.0
+;; Keywords: convenience
+;; URL: https://github.com/davep/is-a.el
+
+;; is-a.el is free software distributed under the terms of the GNU General
+;; Public Licence, version 2 or (at your option) any later version. For
+;; details see the file COPYING.
 
 ;;; Commentary:
 ;;
