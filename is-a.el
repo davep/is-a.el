@@ -27,8 +27,7 @@
 
 ;;;###autoload
 (defconst is-a-linux-p
-  (or (eq system-type 'gnu/linux)
-      (eq system-type 'linux))
+  (eq system-type 'gnu/linux)
   "Are we running on a GNU/Linux system?")
 
 ;;;###autoload
