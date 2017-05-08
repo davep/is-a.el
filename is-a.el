@@ -77,7 +77,7 @@
   "Are we on some form of Unix but not running as a graphical app?")
 
 ;;;###autoload
-(defconst is-a-root-p
+(defconst is-a-root-user-p
   (and is-a-unix-p (zerop (user-uid)))
   "Are we running as root?")
 
