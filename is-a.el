@@ -41,11 +41,6 @@
   "Are we running on GNU/Linux, in a terminal?")
 
 ;;;###autoload
-(defconst is-a-linux-console-p
-  (and is-a-linux-terminal-p (string= (getenv "TERM") "linux"))
-  "Does it look like we're on a Linux console?")
-
-;;;###autoload
 (defconst is-a-macOS-p
   (eq system-type 'darwin)
   "Are we running on some form of macOS?")
