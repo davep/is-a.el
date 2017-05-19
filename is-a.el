@@ -32,12 +32,12 @@
 
 ;;;###autoload
 (defconst is-a-linux-x-p
-  (and window-system is-a-linux-p)
+  (and (display-graphic-p) is-a-linux-p)
   "Are we running under X on a GNU/Linux system?")
 
 ;;;###autoload
 (defconst is-a-linux-terminal-p
-  (and (not window-system) is-a-linux-p)
+  (and (not (display-graphic-p)) is-a-linux-p)
   "Are we running on GNU/Linux, in a terminal?")
 
 ;;;###autoload
@@ -47,7 +47,7 @@
 
 ;;;###autoload
 (defconst is-a-macOS-terminal-p
-  (and is-a-macOS-p (not window-system))
+  (and is-a-macOS-p (not (display-graphic-p)))
   "Are we running in an macOS terminal?")
 
 ;;;###autoload
@@ -62,12 +62,12 @@
 
 ;;;###autoload
 (defconst is-a-unix-window-p
-  (and is-a-unix-p window-system)
+  (and is-a-unix-p (display-graphic-p))
   "Are we on some form of Unix and in a graphical environment?")
 
 ;;;###autoload
 (defconst is-a-unix-terminal-p
-  (and is-a-unix-p (not window-system))
+  (and is-a-unix-p (not (display-graphic-p)))
   "Are we on some form of Unix but not running as a graphical app?")
 
 ;;;###autoload
