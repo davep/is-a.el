@@ -1,8 +1,8 @@
 ;;; is-a.el --- Tools for testing the environment we're running in
-;; Copyright 2017 by Dave Pearson <davep@davep.org>
+;; Copyright 2017-2020 by Dave Pearson <davep@davep.org>
 
 ;; Author: Dave Pearson <davep@davep.org>
-;; Version: 1.3
+;; Version: 1.4
 ;; Keywords: convenience
 ;; URL: https://github.com/davep/is-a.el
 
@@ -63,6 +63,11 @@
 (defconst is-a-macOS-window-p
   (and is-a-macOS-p (not is-a-macOS-terminal-p))
   "Are we running in an macOS window?")
+
+;;;###autoload
+(defconst is-a-macOS-dark-mode-window-p
+  (and is-a-macOS-window-p (string= (shell-command-to-string "defaults read -g AppleInterfaceStyle") "Dark\n"))
+  "Are we running in a macOS window in dark mode?")
 
 ;;;###autoload
 (defconst is-a-unix-p
